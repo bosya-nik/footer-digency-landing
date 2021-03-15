@@ -26,7 +26,7 @@ module.exports = {
                             sources: false
                         }
                     },
-                    'pug-html-loader'
+                    'pug-plain-loader'
                 ]
             },
             {

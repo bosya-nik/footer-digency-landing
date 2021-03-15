@@ -9,10 +9,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
+    target: "web",
     devServer: {
         open: true,
         hot: true,
-        port: 8088
+        port: 3333,
+        contentBase: './dist',
+        watchContentBase: true,
     },
     module: {
         rules: [

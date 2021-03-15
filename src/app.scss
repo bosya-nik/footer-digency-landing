@@ -5,10 +5,36 @@ $light: #F2F9FF;
 $dark: #262A4E;
 $color-contrast-dark: #646464;
 
+$input-padding-x: 1rem;
+$input-color: $primary;
+
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
 @import "/node_modules/@icon/icofont/icofont.css";
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+::placeholder {
+    color: desaturate(lighten($primary, 10%), 30%) !important;
+}
+.header {
+    &>div {
+        min-height: 100vh;
+    }
+    background-image: linear-gradient(135deg, darken($primary, 15%), lighten($primary, 15%));
+    &-nav {
+        .nav-link {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+    }
+    .search-form {
+        position: relative;
+        i {
+            position: absolute;
+            right: 1rem;
+            top: .33rem;
+        }
+    }
 }

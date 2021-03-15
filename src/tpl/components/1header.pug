@@ -1,4 +1,28 @@
 header.header.container-fluid.bg-primary
-    .container.py-3 
-        button.btn.btn-light button
-        input.form-control.mt-3
+    .d-flex.flex-column
+        nav.navbar.navbar-expand-xl.navbar-dark.header-nav
+            .container
+                a.navbar-brand.fw-bold.fs-2(href='#') LOGO.
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.mx-auto.mb-2.mb-lg-0.text-uppercase
+                        li.nav-item
+                            a.nav-link.active(aria-current='page' href='#') Home
+                        li.nav-item
+                            a.nav-link(href='#') Services
+                        li.nav-item
+                            a.nav-link(href='#') About
+                        li.nav-item
+                            a.nav-link(href='#') Portfolio
+                        li.nav-item
+                            a.nav-link(href='#') Our Team
+                        li.nav-item
+                            a.nav-link(href='#') Pricing
+                        li.nav-item
+                            a.nav-link(href='#') Blog
+                    form.d-flex.search-form
+                        input.form-control.rounded-pill(type='search' placeholder='Search' aria-label='Search')
+                        i.icofont.icofont-search-1.text-primary
+        .header-content.py-3.flex-grow-1.container.d-flex.align-items-center
+            h1 hc

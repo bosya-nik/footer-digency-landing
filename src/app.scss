@@ -1,19 +1,14 @@
-@import "./styles/normalize";
+$primary: #2370C8;
+$secondary: #E0E0E0;
+$info: #6AB0FF;
+$light: #F2F9FF;
+$dark: #262A4E;
+$color-contrast-dark: #646464;
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+@import "/node_modules/@icon/icofont/icofont.css";
 
 body {
-  min-height: 100vh;
-  background: #f4f5f6 url('./assets/images/bg.jpg') center fixed no-repeat;
-  background-size: cover;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.main {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }

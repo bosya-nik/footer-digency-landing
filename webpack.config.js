@@ -12,17 +12,15 @@ module.exports = {
     target: "web",
     devServer: {
         open: true,
-        hot: true,
         port: 3333,
-        contentBase: './dist',
+        contentBase: path.join(__dirname, 'src'),
         watchContentBase: true,
+        hot: true,
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.pug$/,
-                use: [
-                    {
+                use: [{
                         loader: "html-loader",
                         options: {
                             sources: false
@@ -33,8 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(sa|sc|c)ss$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader
                     },
                     {
@@ -54,36 +51,30 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|webp|svg|bmp|ico)$/i,
                 exclude: /(public)/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: "images",
-                            name: "[name].[ext]"
-                        }
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        outputPath: "images",
+                        name: "[name].[ext]"
                     }
-                ]
+                }]
             },
             {
                 test: /\.(woff2?|ttf|otf|eot)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: "fonts"
-                        }
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        outputPath: "fonts"
                     }
-                ]
+                }]
             },
         ]
     },
     plugins: [
         new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: './src/assets'
-                }
-            ]
+            patterns: [{
+                from: './src/assets'
+            }]
         }),
         new MiniCssExtractPlugin({
             filename: 'bundle.css'

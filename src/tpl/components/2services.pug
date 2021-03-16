@@ -1,0 +1,40 @@
+-
+    let servicesData = [
+        {
+            title: 'Web Development',
+            icon: 'bug',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius eveniet fuga fugit'
+        },
+        {
+            title: 'Graphic Design',
+            icon: 'ui-image',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius eveniet fuga fugit'
+        },
+        {
+            title: 'Digital Material',
+            icon: 'pie-chart',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius eveniet fuga fugit'
+        },
+        {
+            title: 'VFX & Motion Design',
+            icon: 'contrast',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius eveniet fuga fugit'
+        },
+    ]
+section.section.services.container
+    .row
+        .col-12.text-center.mb-3
+            h5 our services
+            h2.h1 we are providing digital services
+    .row.row-cols-1.row-cols-md-2.row-cols-xl-4.g-3
+        each service in servicesData
+            .col
+                .services-item.text-center.py-3.px-3
+                    .services-item__icon.mt-5.mb-3.mx-auto
+                        i(class="icofont icofont-" + service.icon)
+                    h4 #{service.title}
+                    p.my-3 #{service.description}
+                    a.services-item__link.btn.btn-primary.rounded-circle.d-none(href="#")
+                        i.icofont.icofont-arrow-right
+
+

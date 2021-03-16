@@ -1,0 +1,25 @@
+.services {
+    &-item {
+      background-color: $light;
+      border: 3px solid darken($light, 10%);
+      &__icon {
+        background-image: url(./assets/images/circle.png);
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: $dark;
+      }
+      &__link {
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+    }
+}

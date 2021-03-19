@@ -1,0 +1,36 @@
+-
+    let featuresData = [
+        {
+            title: 'Smart Planning',
+            icon: 'chart-flow-1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius eveniet'
+        },
+        {
+            title: 'Our Partnership',
+            icon: 'people',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius'
+        },
+        {
+            title: 'Super Ideas',
+            icon: 'light-bulb',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus, eius'
+        },
+        {
+            title: 'Newest Technologies',
+            icon: 'abacus',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi cupiditate doloribus'
+        },
+    ]
+section.section.features.container-fluid.bg-light
+    .container.py-5
+        .row.border.border-5.border-white.p-3
+            each feature in featuresData
+                .col-12.col-md-6.col-xl-3
+                    .features-item.text-center
+                        .features-item__icon.mt-5.mb-3.mx-auto
+                            i(class="icofont icofont-" + feature.icon)
+                        h4 #{feature.title}
+                        p.my-3 #{feature.description}
+
+
+

@@ -1,0 +1,14 @@
+.features {
+  &-item {
+    &__icon {
+      background-image: url(./assets/images/circle2.png);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: $dark;
+    }
+  }
+}

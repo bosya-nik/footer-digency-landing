@@ -1,1 +1,29 @@
-section.section
+-
+    let team = [
+        {
+            name: 'Angela Davis',
+            employment: 'CEO',
+            photo: './images/team/team1.jpg'
+        },
+        {
+            name: 'Akuni Mazuda',
+            employment: 'Designer',
+            photo: './images/team/team2.jpg'
+        },
+        {
+            name: 'Silvia De La Cruz',
+            employment: 'Lead Developer',
+            photo: './images/team/team3.jpg'
+        },
+    ]
+section.section.container-fluid.bg-light.team.py-5
+    .container.py-3
+        h5.text-center our team
+        h2.text-center our top dedicated professionals
+        .row.row-cols-1.row-cols-md-3.g-3.g-lg-4.g-xl-5.mb-5
+            each member in team
+                .col.team-member.position-relative
+                    img.img-fluid(src=member.photo)
+                    .team-member__plate.text-center.shadow-sm.bg-white.py-3
+                        h6.text-dark.fs-4.mb-1 #{member.name}
+                        p.text-uppercase.mb-0 #{member.employment}

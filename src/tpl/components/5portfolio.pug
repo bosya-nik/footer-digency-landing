@@ -1,13 +1,75 @@
+-
+    let projects = [
+        {
+            title: 'Project 1',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project01.jpg'
+        },
+        {
+            title: 'Project 2',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project02.jpg'
+        },
+        {
+            title: 'Project 3',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project03.jpg'
+        },
+        {
+            title: 'Project 4',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project04.jpg'
+        },
+        {
+            title: 'Project 5',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project05.jpg'
+        },
+        {
+            title: 'Project 6',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project06.jpg'
+        },
+        {
+            title: 'Project 7',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project07.jpg'
+        },
+        {
+            title: 'Project 8',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project08.jpg'
+        },
+        {
+            title: 'Project 9',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project09.jpg'
+        },
+        {
+            title: 'Project 10',
+            description: 'lorem ipsum',
+            img: './images/portfolio/project10.jpg'
+        },
+    ]
 section.section.container.portfolio
+    h5 Our portfolio
+    h2 Take A Look At Our Latest Work
     .glide
         .glide__track(data-glide-el="track")
             ul.glide__slides
-                li.glide__slide.bg-danger 0
-                li.glide__slide.bg-danger 0
-                li.glide__slide.bg-danger 0
-                li.glide__slide.bg-danger 0
-                li.glide__slide.bg-danger 0
-                li.glide__slide.bg-danger 0
-        div(data-glide-el="controls")
-            button(data-glide-dir="<") Prev
-            button(data-glide-dir=">") Next
+                each project, index in projects
+                    if(index % 2 === 0)
+                        li.glide__slide
+                            a.portfolio-item.mb-3(href="#" style=`background-image:url(${projects[index].img})`)
+                                .portfolio-item__overlay
+                                    h4 #{projects[index].title}
+                                    p #{projects[index].description}
+                            a.portfolio-item.mb-3(href="#" style=`background-image:url(${projects[index+1].img})`)
+                                .portfolio-item__overlay
+                                    h4 #{projects[index+1].title}
+                                    p #{projects[index+1].description}
+        .d-flex.justify-content-center(data-glide-el="controls")
+            button.btn.btn-secondary.rounded-circle.portfolio-btn(data-glide-dir="<")
+                i.icofont.icofont-rounded-left
+            button.btn.btn-secondary.rounded-circle.portfolio-btn(data-glide-dir=">")
+                i.icofont.icofont-rounded-right

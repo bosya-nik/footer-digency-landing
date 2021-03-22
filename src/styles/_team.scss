@@ -1,0 +1,15 @@
+.team {
+  &-member {
+    &__plate {
+      position: absolute;
+      left: 20%;
+      bottom: -10%;
+      width: 80%;
+      @media screen and (max-width: 767px) {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

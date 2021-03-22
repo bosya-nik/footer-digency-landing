@@ -1,0 +1,52 @@
+.portfolio {
+  &-item {
+    display: block;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .portfolio-item__overlay {
+        bottom: 0 !important;
+      }
+    }
+    &__overlay {
+      position: absolute;
+      bottom: -150px;
+      left: 0;
+      right: 0;
+      background-color: rgba($dark,.5);
+      color: $white;
+      padding: 1rem;
+      transition: .3s ease;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-btn {
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+    color: $body-color;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+    &:focus {
+      background-color: $secondary;
+      box-shadow: none !important;
+      color: $body-color;
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

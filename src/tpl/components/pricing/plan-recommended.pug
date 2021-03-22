@@ -1,0 +1,12 @@
+.col.pricing-plan
+    .shadow-sm.text-center.text-white.bg-primary.py-5.d-flex.flex-column.align-items-center.h-100
+        h4 #{plan.title}
+        .pricing-plan__icon.my-5
+            i(class="icofont icofont-" + plan.icon)
+        .pricing-plan__price
+            span.fs-2.fw-medium $#{plan.price.mothly}
+            span /Month
+        .my-3.flex-grow-1
+            each feature in plan.features
+                p #{feature}
+        a.btn.text-primary.bg-white.rounded-pill(href='#') Start Now

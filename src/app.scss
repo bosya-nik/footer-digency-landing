@@ -28,7 +28,9 @@ body {
 .btn {
     padding: .5rem 2rem;
 }
-
+.fw-medium {
+    font-weight: 500 !important;
+}
 .section {
     margin-top: 10rem;
     padding-top: 1rem;
@@ -51,3 +53,4 @@ body {
 @import './styles/features';
 @import './styles/portfolio';
 @import './styles/team';
+@import './styles/pricing';

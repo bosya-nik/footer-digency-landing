@@ -1,0 +1,14 @@
+.pricing {
+  &-plan {
+    &__icon {
+      background-image: url(./assets/images/circle.png);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: $dark;
+    }
+  }
+}

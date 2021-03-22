@@ -1,1 +1,46 @@
-section.section
+-
+    let plans = [
+        {
+            recommended: false,
+            title: 'Basic plan',
+            icon: 'price',
+            price: {
+                mothly: 50,
+                annual: 550
+            },
+            features: ['Graphic Design','Web Design','HTML/CSS','SEO Marketing']
+        },
+        {
+            recommended: false,
+            title: 'Standard plan',
+            icon: 'money-bag',
+            price: {
+                mothly: 100,
+                annual: 1100
+            },
+            features: ['Graphic Design','Web Design','HTML/CSS','SEO Marketing','Business Analysis']
+        },
+        {
+            recommended: true,
+            title: 'Premium plan',
+            icon: 'money',
+            price: {
+                mothly: 150,
+                annual: 1600
+            },
+            features: ['Graphic Design','Web Design','UI/UX','HTML/CSS','SEO Marketing','Business Analysis']
+        }
+    ]
+section.section.pricing.container
+    .row.justify-content-between.align-items-center
+        .col
+            h5 our pricing
+            h2 Choose a plan that's right for you
+        .col-auto.pricing-switcher
+            span switcher
+    .row.row-cols-1.row-cols-lg-3.g-3.g-lg-4.g-xl-5
+        each plan in plans
+            if(plan.recommended)
+                include pricing/plan-recommended
+            else
+                include pricing/plan

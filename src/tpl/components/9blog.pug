@@ -1,1 +1,54 @@
-section.section
+-
+    let blogPosts = [
+        {
+            title: 'Maecenas laoree efficiture sagittis aliquam eleifend nisl',
+            date: 'March 23, 2021',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        },
+        {
+            title: 'Maecenas laoree efficiture sagittis aliquam eleifend nisl',
+            date: 'March 23, 2021',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        },
+        {
+            title: 'Maecenas laoree efficiture sagittis aliquam eleifend nisl',
+            date: 'March 23, 2021',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        },
+        {
+            title: 'Maecenas laoree efficiture sagittis aliquam eleifend nisl',
+            date: 'March 23, 2021',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        },
+    ]
+
+section.section.blog.container
+    .row.align-items-center
+        .col-12.col-lg-3
+            h5.mb-1 Our blog
+            h2.mb-0 Latest news & blog
+            hr.bg-primary.w-25.mt-0
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ullam!
+            .input-group.mt-4.w-75
+                input.form-control.form-control-sm.border-primary(placeholder='Enter your E-Mail' type='email')
+                button.btn.btn-primary.btn-sm.px-3
+                    i.icofont.icofont-arrow-right
+            p.py-3 &nbsp;
+        .col-12.col-lg-9
+            .glide.glide-blog
+                .glide__track(data-glide-el="track")
+                    .glide__slides
+                        each post in blogPosts
+                            .glide__slide
+                                .blog-post.mx-3.border.border-primary.py-5.px-4
+                                    h6.text-dark.fs-5 #{post.title}
+                                    p.post-date.text-primary Posted: #{post.date}
+                                    p #{post.body}
+                                    a.btn.bg-transparent.px-0.text-primary
+                                        span Read More
+                                        i.icofont.icofont-arrow-right.ms-2
+                .d-flex.justify-content-center.mt-3(data-glide-el="controls")
+                    button.btn.btn-secondary.rounded-circle.portfolio-btn(data-glide-dir="<")
+                        i.icofont.icofont-rounded-left
+                    button.btn.btn-secondary.rounded-circle.portfolio-btn(data-glide-dir=">")
+                        i.icofont.icofont-rounded-right

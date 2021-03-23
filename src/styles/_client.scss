@@ -1,0 +1,9 @@
+.clients {
+  background-color: lighten($primary, 15%);
+  &-item {
+    background-color: lighten($primary, 10%);
+    img {
+      width: 100px;
+    }
+  }
+}

@@ -5,7 +5,7 @@
             title: 'Basic plan',
             icon: 'price',
             price: {
-                mothly: 50,
+                monthly: 50,
                 annual: 550
             },
             features: ['Graphic Design','Web Design','HTML/CSS','SEO Marketing']
@@ -15,7 +15,7 @@
             title: 'Standard plan',
             icon: 'money-bag',
             price: {
-                mothly: 100,
+                monthly: 100,
                 annual: 1100
             },
             features: ['Graphic Design','Web Design','HTML/CSS','SEO Marketing','Business Analysis']
@@ -25,20 +25,35 @@
             title: 'Premium plan',
             icon: 'money',
             price: {
-                mothly: 150,
+                monthly: 150,
                 annual: 1600
             },
             features: ['Graphic Design','Web Design','UI/UX','HTML/CSS','SEO Marketing','Business Analysis']
         }
-    ]
+    ];
+    let subscriptionType = 'monthly';
 section.section.pricing.container
     .row.justify-content-between.align-items-center
-        .col
+        .col-12.col-lg
             h5 our pricing
             h2 Choose a plan that's right for you
-        .col-auto.pricing-switcher
-            span switcher
-    .row.row-cols-1.row-cols-lg-3.g-3.g-lg-4.g-xl-5
+        .col-12.col-lg-auto.pricing-switcher.d-flex.align-items-center
+            .fw-medium.fs-5.text-primary Monthly
+            .custom-switcher.mx-3
+                input(id="subscription-switcher" type="checkbox")
+                label(for="subscription-switcher")
+            .fw-medium.fs-5.text-dark Annual
+    .row.row-cols-1.row-cols-lg-3.g-3.g-lg-4.g-xl-5#monthly
+        -
+            subscriptionType = 'monthly';
+        each plan in plans
+            if(plan.recommended)
+                include pricing/plan-recommended
+            else
+                include pricing/plan
+    .row.row-cols-1.row-cols-lg-3.g-3.g-lg-4.g-xl-5.d-none#annual
+        -
+            subscriptionType = 'annual';
         each plan in plans
             if(plan.recommended)
                 include pricing/plan-recommended

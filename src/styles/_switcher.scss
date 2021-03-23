@@ -1,0 +1,30 @@
+.custom-switcher {
+  height: 1.5rem;
+  input[type='checkbox'] {
+    display: none;
+    &+label {
+      width: 3.25rem;
+      height: 1.5rem;
+      background-color: $primary;
+      border-radius: 50rem;
+      transition: .3s ease;
+      &::after {
+        display: block;
+        content: '';
+        width: calc(1.5rem + 2px);
+        height: calc(1.5rem + 2px);
+        background-color: $white;
+        box-shadow: rgba($dark, .5) 0 0 5px;
+        border-radius: 50rem;
+        transform: translate(-1px, -1px);
+        transition: .3s ease;
+      }
+    }
+    &:checked+label {
+      background-color: $dark;
+      &::after {
+        transform: translate(calc(1.625rem + 1px), -1px);
+      }
+    }
+  }
+}

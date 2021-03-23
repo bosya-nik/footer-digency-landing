@@ -4,8 +4,11 @@
         .pricing-plan__icon.my-5
             i(class="icofont icofont-" + plan.icon)
         .pricing-plan__price
-            span.fs-2.fw-medium $#{plan.price.mothly}
-            span /Month
+            span.fs-2.fw-medium $#{plan.price[subscriptionType]}
+            if(subscriptionType === 'monthly')
+                span /Month
+            else
+                span /Year
         .my-3.flex-grow-1
             each feature in plan.features
                 p #{feature}

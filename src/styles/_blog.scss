@@ -1,0 +1,23 @@
+.blog {
+  hr {
+    opacity: 1;
+    height: 2px;
+  }
+  .glide__slide {
+    min-height: 100%;
+  }
+  &-post {
+    height: 100%;
+    transition: .3s ease;
+    h6,p,a {
+      transition: .3s ease;
+    }
+    &:hover {
+      background-color: $primary !important;
+      color: $white !important;
+      h6,p,a {
+        color: $white !important;
+      }
+    }
+  }
+}
